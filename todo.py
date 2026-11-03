@@ -12,8 +12,7 @@ class TodoList:
         return len(self.items) - 1
 
     def complete(self, index):
-        # BUG: toggles the item at the wrong index (off by one)
-        self.items[index - 1]["done"] = True
+        self.items[index]["done"] = True
 
     def pending(self):
         return [i for i in self.items if not i["done"]]
